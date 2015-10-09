@@ -1,10 +1,12 @@
-package es.upm.miw.pd.singleton;
+package es.upm.miw.pd.singleton.factory;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
 
 import org.junit.Test;
+
+import es.upm.miw.pd.singleton.factory.ReferencesFactory;
 
 public class ReferencesFactoryTest {
 
