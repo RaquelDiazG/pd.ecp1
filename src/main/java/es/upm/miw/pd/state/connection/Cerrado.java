@@ -1,47 +1,43 @@
 package es.upm.miw.pd.state.connection;
 
-public class Cerrado extends State{
+public class Cerrado extends State {
 
     @Override
-    public void abrir() {
-        // TODO Auto-generated method stub
-        
+    public void abrir(Conexion conexion) {
+        conexion.setEstado(new Preparado());
     }
 
     @Override
-    public void cerrar() {
-        // TODO Auto-generated method stub
-        
+    public void cerrar(Conexion conexion) {
+        Estado.PARADO;
     }
 
     @Override
-    public void parar() {
-        // TODO Auto-generated method stub
-        
+    public void parar(Conexion conexion) {
+        throw new UnsupportedOperationException("Acción no permitida... ");
     }
 
     @Override
-    public void iniciar() {
-        // TODO Auto-generated method stub
-        
+    public void iniciar(Conexion conexion) {
+        throw new UnsupportedOperationException("Acción no permitida... ");
+
     }
 
     @Override
-    public void enviar(String msg) {
-        // TODO Auto-generated method stub
-        
+    public void enviar(Conexion conexion,String msg) {
+        throw new UnsupportedOperationException("Acción no permitida... ");
+
     }
 
     @Override
-    public void recibir(int respuesta) {
-        // TODO Auto-generated method stub
-        
+    public void recibir(Conexion conexion,int respuesta) {
+        throw new UnsupportedOperationException("Acción no permitida... ");
+
     }
 
     @Override
     public Estado getEstado() {
-        // TODO Auto-generated method stub
-        return null;
+       return Estado.CERRADO;
     }
 
 }

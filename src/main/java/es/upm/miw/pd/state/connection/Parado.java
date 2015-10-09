@@ -4,7 +4,7 @@ public class Parado extends State{
 
     @Override
     public void abrir() {
-        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Acción no permitida... ");
         
     }
 
@@ -16,32 +16,31 @@ public class Parado extends State{
 
     @Override
     public void parar() {
-        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Acción no permitida... ");
         
     }
 
     @Override
     public void iniciar() {
-        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Acción no permitida... ");
         
     }
 
     @Override
     public void enviar(String msg) {
-        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Acción no permitida... ");
         
     }
 
     @Override
     public void recibir(int respuesta) {
-        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Acción no permitida... ");
         
     }
 
     @Override
     public Estado getEstado() {
-        // TODO Auto-generated method stub
-        return null;
+        return Estado.PARADO;
     }
 
 }
