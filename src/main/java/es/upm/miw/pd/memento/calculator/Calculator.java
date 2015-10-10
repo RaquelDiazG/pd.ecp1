@@ -1,6 +1,7 @@
 package es.upm.miw.pd.memento.calculator;
 
 public class Calculator {
+
     private int total;
 
     public Calculator() {
