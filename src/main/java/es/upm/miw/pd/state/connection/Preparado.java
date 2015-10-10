@@ -1,41 +1,36 @@
 package es.upm.miw.pd.state.connection;
 
-public class Preparado extends State{
+public class Preparado extends State {
 
     @Override
-    public void abrir() {
-                
+    public void abrir(Conexion conexion) {
+
     }
 
     @Override
-    public void cerrar() {
-      Estado.CERRADO;
-        
+    public void cerrar(Conexion conexion) {
+        conexion.setEstado(new Cerrado());
     }
 
     @Override
-    public void parar() {
-        Estado.PARADO;
-        
+    public void parar(Conexion conexion) {
+        conexion.setEstado(new Parado());
     }
 
     @Override
-    public void iniciar() {
-        
-        
+    public void iniciar(Conexion conexion) {
+
     }
 
     @Override
-    public void enviar(String msg) {
-        this.link.enviar(msg);
-      this.estado = Estado.ESPERANDO;
-        
+    public void enviar(Conexion conexion, String msg) {
+        conexion.getLink().enviar(msg);
+        conexion.setEstado(new Esperando());
     }
 
     @Override
-    public void recibir(int respuesta) {
+    public void recibir(Conexion conexion, int respuesta) {
         throw new UnsupportedOperationException("Acción no permitida... ");
-        
     }
 
     @Override

@@ -1,15 +1,17 @@
 package es.upm.miw.pd.state.conection;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
 import org.junit.Before;
 import org.junit.Test;
 
 import es.upm.miw.pd.state.connection.Conexion;
 import es.upm.miw.pd.state.connection.Estado;
 import es.upm.miw.pd.state.connection.Link;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 public class ConexionTest {
+
     private Conexion conexion;
 
     private LinkMock link;
@@ -66,7 +68,7 @@ public class ConexionTest {
             ignored.toString();
         }
     }
-    
+
     @Test
     public void testCerradoNoSoportadoRecibir() {
         try {
@@ -123,7 +125,7 @@ public class ConexionTest {
             ignored.toString();
         }
     }
-    
+
     @Test
     public void testParadoNoSoportadoAbrir() {
         this.conexion.abrir();
@@ -175,7 +177,7 @@ public class ConexionTest {
             ignored.toString();
         }
     }
-    
+
     @Test
     public void testParadoNoSoportadoRecibir() {
         this.conexion.abrir();
@@ -187,9 +189,9 @@ public class ConexionTest {
             ignored.toString();
         }
     }
-    
+
     @Test
-    public void testEsperandoNoSoportadoAbrir(){
+    public void testEsperandoNoSoportadoAbrir() {
         this.conexion.abrir();
         this.conexion.enviar("");
         try {
@@ -197,11 +199,11 @@ public class ConexionTest {
             fail();
         } catch (UnsupportedOperationException ignored) {
             ignored.toString();
-        }        
+        }
     }
-    
+
     @Test
-    public void testEsperandoNoSoportadoCerrar(){
+    public void testEsperandoNoSoportadoCerrar() {
         this.conexion.abrir();
         this.conexion.enviar("");
         try {
@@ -209,11 +211,11 @@ public class ConexionTest {
             fail();
         } catch (UnsupportedOperationException ignored) {
             ignored.toString();
-        }        
+        }
     }
-    
+
     @Test
-    public void testEsperandoNoSoportadoParar(){
+    public void testEsperandoNoSoportadoParar() {
         this.conexion.abrir();
         this.conexion.enviar("");
         try {
@@ -221,11 +223,11 @@ public class ConexionTest {
             fail();
         } catch (UnsupportedOperationException ignored) {
             ignored.toString();
-        }        
+        }
     }
-    
+
     @Test
-    public void testEsperandoNoSoportadoIniciar(){
+    public void testEsperandoNoSoportadoIniciar() {
         this.conexion.abrir();
         this.conexion.enviar("");
         try {
@@ -233,11 +235,11 @@ public class ConexionTest {
             fail();
         } catch (UnsupportedOperationException ignored) {
             ignored.toString();
-        }        
+        }
     }
-    
+
     @Test
-    public void testEsperandoNoSoportadoEnviar(){
+    public void testEsperandoNoSoportadoEnviar() {
         this.conexion.abrir();
         this.conexion.enviar("");
         try {
@@ -245,9 +247,9 @@ public class ConexionTest {
             fail();
         } catch (UnsupportedOperationException ignored) {
             ignored.toString();
-        }        
+        }
     }
-    
+
     @Test
     public void testEsperandoRecibirACK() {
         this.conexion.abrir();
@@ -263,6 +265,5 @@ public class ConexionTest {
         this.conexion.recibir(1);
         assertEquals(Estado.CERRADO, this.conexion.getEstado());
     }
-
 
 }

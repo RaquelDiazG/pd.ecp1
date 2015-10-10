@@ -9,7 +9,7 @@ public class Cerrado extends State {
 
     @Override
     public void cerrar(Conexion conexion) {
-        Estado.PARADO;
+
     }
 
     @Override
@@ -24,20 +24,20 @@ public class Cerrado extends State {
     }
 
     @Override
-    public void enviar(Conexion conexion,String msg) {
+    public void enviar(Conexion conexion, String msg) {
         throw new UnsupportedOperationException("Acción no permitida... ");
 
     }
 
     @Override
-    public void recibir(Conexion conexion,int respuesta) {
+    public void recibir(Conexion conexion, int respuesta) {
         throw new UnsupportedOperationException("Acción no permitida... ");
 
     }
 
     @Override
     public Estado getEstado() {
-       return Estado.CERRADO;
+        return Estado.CERRADO;
     }
 
 }

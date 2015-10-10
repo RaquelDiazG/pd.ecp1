@@ -1,41 +1,36 @@
 package es.upm.miw.pd.state.connection;
 
-public class Parado extends State{
+public class Parado extends State {
 
     @Override
-    public void abrir() {
+    public void abrir(Conexion conexion) {
         throw new UnsupportedOperationException("Acción no permitida... ");
-        
     }
 
     @Override
-    public void cerrar() {
-        // TODO Auto-generated method stub
-        
+    public void cerrar(Conexion conexion) {
+        throw new UnsupportedOperationException("Acción no permitida... ");
     }
 
     @Override
-    public void parar() {
-        throw new UnsupportedOperationException("Acción no permitida... ");
-        
+    public void parar(Conexion conexion) {
+
     }
 
     @Override
-    public void iniciar() {
-        throw new UnsupportedOperationException("Acción no permitida... ");
-        
+    public void iniciar(Conexion conexion) {
+        conexion.setEstado(new Preparado());
     }
 
     @Override
-    public void enviar(String msg) {
+    public void enviar(Conexion conexion, String msg) {
         throw new UnsupportedOperationException("Acción no permitida... ");
-        
+
     }
 
     @Override
-    public void recibir(int respuesta) {
+    public void recibir(Conexion conexion, int respuesta) {
         throw new UnsupportedOperationException("Acción no permitida... ");
-        
     }
 
     @Override
