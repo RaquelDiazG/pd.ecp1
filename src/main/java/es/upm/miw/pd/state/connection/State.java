@@ -2,6 +2,8 @@ package es.upm.miw.pd.state.connection;
 
 public abstract class State {
 
+    protected static final String MENSAJE_OPERATION_EXCEPTION = "Acción no permitida... ";
+
     public abstract void abrir(Conexion conexion);
 
     public abstract void cerrar(Conexion conexion);

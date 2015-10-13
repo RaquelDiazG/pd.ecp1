@@ -30,7 +30,7 @@ public class Preparado extends State {
 
     @Override
     public void recibir(Conexion conexion, int respuesta) {
-        throw new UnsupportedOperationException("Acción no permitida... ");
+        throw new UnsupportedOperationException(MENSAJE_OPERATION_EXCEPTION);
     }
 
     @Override

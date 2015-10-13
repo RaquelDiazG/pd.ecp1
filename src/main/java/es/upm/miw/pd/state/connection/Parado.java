@@ -4,12 +4,12 @@ public class Parado extends State {
 
     @Override
     public void abrir(Conexion conexion) {
-        throw new UnsupportedOperationException("Acción no permitida... ");
+        throw new UnsupportedOperationException(MENSAJE_OPERATION_EXCEPTION);
     }
 
     @Override
     public void cerrar(Conexion conexion) {
-        throw new UnsupportedOperationException("Acción no permitida... ");
+        throw new UnsupportedOperationException(MENSAJE_OPERATION_EXCEPTION);
     }
 
     @Override
@@ -24,13 +24,13 @@ public class Parado extends State {
 
     @Override
     public void enviar(Conexion conexion, String msg) {
-        throw new UnsupportedOperationException("Acción no permitida... ");
+        throw new UnsupportedOperationException(MENSAJE_OPERATION_EXCEPTION);
 
     }
 
     @Override
     public void recibir(Conexion conexion, int respuesta) {
-        throw new UnsupportedOperationException("Acción no permitida... ");
+        throw new UnsupportedOperationException(MENSAJE_OPERATION_EXCEPTION);
     }
 
     @Override
