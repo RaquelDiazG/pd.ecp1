@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ReferencesFactory {
+
+    private static ReferencesFactory factory = new ReferencesFactory(); // Patron singleton con creacion temprana
+
     private Map<String, Integer> references;
 
     private int reference;
@@ -11,6 +14,10 @@ public class ReferencesFactory {
     public ReferencesFactory() {
         this.references = new HashMap<>();
         this.reference = 0;
+    }
+
+    public static ReferencesFactory getFactory() {
+        return factory;
     }
 
     public int getReference(String key) {
