@@ -4,11 +4,8 @@ public class Memento {
 
     private int total;
 
-    private String cadena;
-
-    public Memento(int total, String cadena) {
+    public Memento(int total) {
         this.total = total;
-        this.cadena = cadena;
     }
 
     public int getTotal() {
@@ -19,7 +16,4 @@ public class Memento {
         this.total = totalCalculadora;
     }
 
-    public String getCadena() {
-        return this.cadena;
-    }
 }

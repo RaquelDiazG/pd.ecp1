@@ -4,13 +4,14 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 public class GestorMementos {
-    private SortedMap<String, T> lista = new TreeMap<String, T>();
 
-    public void addMemento(String key, T memento) {
-        this.lista.put(this.lista.size() + ":" + key, memento);
+    private SortedMap<String, Memento> lista = new TreeMap<String, Memento>();
+
+    public void addMemento(String key, Memento memento) {
+        this.lista.put(key, memento);
     }
 
-    public T getMemento(String key) {
+    public Memento getMemento(String key) {
         return this.lista.get(key);
     }
 

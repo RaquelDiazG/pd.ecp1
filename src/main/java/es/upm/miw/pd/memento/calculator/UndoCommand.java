@@ -1,14 +1,20 @@
 package es.upm.miw.pd.memento.calculator;
 
-public class UndoCommand extends ComandAbstract {
+import upm.jbb.IO;
 
-    public UndoCommand(Calculator calculator) {
+public class UndoCommand extends ComandAbstract {
+    private GestorMementos gestorMementos;
+
+    public UndoCommand(Calculator calculator, GestorMementos gestorMementos) {
         super(calculator);
+        this.gestorMementos = gestorMementos;
     }
 
     @Override
     public void execute() {
-
+        String nombreMemento = IO.getIO().readString();
+        Memento memento = gestorMementos.getMemento(nombreMemento);
+        super.getCalculator().setTotal(memento.getTotal());
     }
 
     @Override

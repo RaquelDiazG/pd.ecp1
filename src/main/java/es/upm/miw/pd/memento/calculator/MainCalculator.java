@@ -6,12 +6,15 @@ public class MainCalculator {
     private CommandManager commandManager;
 
     public MainCalculator() {
-        Calculator calculator = new Calculator();
+        Calculator calculator = new CalculatorMement();
+        GestorMementos gestorMementos = new GestorMementos();
         this.commandManager = new CommandManager();
         this.commandManager.add(new AddCommand(calculator));
         this.commandManager.add(new SubtractCommand(calculator));
         this.commandManager.add(new ResetCommand(calculator));
         this.commandManager.add(new PrintCommand(calculator));
+        this.commandManager.add(new SaveCommand(calculator, gestorMementos));
+        this.commandManager.add(new UndoCommand(calculator, gestorMementos));
     }
 
     public void execute() {
