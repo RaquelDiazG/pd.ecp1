@@ -1,6 +1,19 @@
 package es.upm.miw.pd.text;
 
-public class Escrito extends Documento {
+import java.util.ArrayList;
+import java.util.List;
 
-    private Documento documento;
+public abstract class Escrito extends Componente {
+
+    protected List<Componente> documento;
+
+    public Escrito() {
+        this.documento = new ArrayList<Componente>();
+    }
+
+    public abstract void add(Componente componente);
+
+    public abstract void remove(Componente componente);
+
+    public abstract String dibujar(boolean mayusculas);
 }
