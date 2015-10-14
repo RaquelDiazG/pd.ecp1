@@ -13,4 +13,8 @@ public class NaturalNumberManager {
     public void createNaturalNumber() {
         this.naturalNumber = this.creator.createNaturalNumber();
     }
+
+    public NaturalNumber getNaturalNumber() {
+        return naturalNumber;
+    }
 }
