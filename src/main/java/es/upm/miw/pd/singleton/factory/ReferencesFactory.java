@@ -3,9 +3,9 @@ package es.upm.miw.pd.singleton.factory;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ReferencesFactory {
+public final class ReferencesFactory {
 
-    private static ReferencesFactory factory = new ReferencesFactory(); // Patron singleton con creacion temprana
+    private static ReferencesFactory factory = new ReferencesFactory(); // Creacion temprana
 
     private Map<String, Integer> references;
 
