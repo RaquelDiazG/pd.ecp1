@@ -8,7 +8,7 @@ public class Texto extends Escrito {
     public void add(Componente componente) {
         try {
             Escrito escrito = (Escrito) componente;
-            documento.add(escrito);
+            componentes.add(escrito);
         } catch (Exception e) {
             throw new UnsupportedOperationException();
         }
@@ -18,7 +18,7 @@ public class Texto extends Escrito {
     public void remove(Componente componente) {
         try {
             Escrito escrito = (Escrito) componente;
-            documento.removeAll(Collections.singleton(escrito));
+            componentes.removeAll(Collections.singleton(escrito));
         } catch (Exception e) {
             throw new UnsupportedOperationException();
         }
@@ -27,7 +27,7 @@ public class Texto extends Escrito {
     @Override
     public String dibujar(boolean mayusculas) {
         String stringTexto = "";
-        for (Componente componente : documento) {
+        for (Componente componente : componentes) {
             stringTexto += componente.dibujar(mayusculas);
         }
         return stringTexto + "---o---\n";

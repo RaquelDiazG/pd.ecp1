@@ -5,10 +5,10 @@ import java.util.List;
 
 public abstract class Escrito extends Componente {
 
-    protected List<Componente> documento;
+    protected List<Componente> componentes;
 
     public Escrito() {
-        this.documento = new ArrayList<Componente>();
+        this.componentes = new ArrayList<Componente>();
     }
 
     public abstract void add(Componente componente);

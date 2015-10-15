@@ -8,7 +8,7 @@ public class Parrafo extends Escrito {
     public void add(Componente componente) {
         try {
             Caracter caracter = (Caracter) componente;
-            documento.add(caracter);
+            componentes.add(caracter);
         } catch (Exception e) {
             throw new UnsupportedOperationException();
         }
@@ -18,7 +18,7 @@ public class Parrafo extends Escrito {
     public void remove(Componente componente) {
         try {
             Caracter caracter = (Caracter) componente;
-            documento.removeAll(Collections.singleton(caracter));
+            componentes.removeAll(Collections.singleton(caracter));
         } catch (Exception e) {
             throw new UnsupportedOperationException();
         }
@@ -28,7 +28,7 @@ public class Parrafo extends Escrito {
     @Override
     public String dibujar(boolean mayusculas) {
         String stringParrafo = "";
-        for (Componente componente : documento) {
+        for (Componente componente : componentes) {
             stringParrafo += componente.dibujar(mayusculas);
         }
         return stringParrafo + "\n";
