@@ -7,9 +7,9 @@ public class FiguresManager {
 
     private List<Figure> figures;
 
-    private AreaVisitor areaVisitor;
+    private Visitor areaVisitor;
 
-    private NumberOfSidesVisitor numberOfSidesVisitor;
+    private Visitor numberOfSidesVisitor;
 
     public FiguresManager() {
         figures = new ArrayList<>();
