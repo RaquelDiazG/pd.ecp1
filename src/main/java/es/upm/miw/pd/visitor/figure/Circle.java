@@ -9,14 +9,23 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    @Override
-    public double area() {
-        return Math.PI * radius * radius;
+    public double getRadius() {
+        return radius;
     }
 
     @Override
-    public double numberOfSides() {
-        return Double.POSITIVE_INFINITY;
+    public String toString() {
+        return "Circle [description=" + description + ", radius=" + radius + "]";
+    }
+
+    @Override
+    public double area(Visitor v) {
+        return v.visitCircle(this);
+    }
+
+    @Override
+    public double numberOfSides(Visitor v) {
+        return v.visitCircle(this);
     }
 
 }

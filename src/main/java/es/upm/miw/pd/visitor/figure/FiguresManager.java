@@ -1,13 +1,20 @@
 package es.upm.miw.pd.visitor.figure;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class FiguresManager {
 
     private List<Figure> figures;
 
+    private AreaVisitor areaVisitor;
+
+    private NumberOfSidesVisitor numberOfSidesVisitor;
+
     public FiguresManager() {
         figures = new ArrayList<>();
+        areaVisitor = new AreaVisitor();
+        numberOfSidesVisitor = new NumberOfSidesVisitor();
     }
 
     public void add(Figure figure) {
@@ -17,7 +24,7 @@ public class FiguresManager {
     public double totalArea() {
         double result = 0;
         for (Figure figure : figures) {
-            result += figure.area();
+            result += figure.area(areaVisitor);
         }
         return result;
     }
@@ -25,7 +32,7 @@ public class FiguresManager {
     public double totalNumberOfSides() {
         double result = 0;
         for (Figure figure : figures) {
-            result += figure.numberOfSides();
+            result += figure.numberOfSides(numberOfSidesVisitor);
         }
         return result;
     }
