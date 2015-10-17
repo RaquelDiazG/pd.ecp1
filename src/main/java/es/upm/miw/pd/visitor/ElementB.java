@@ -1,4 +1,4 @@
-package es.upm.miw.pd.visitor.figure;
+package es.upm.miw.pd.visitor;
 
 public class ElementB implements Element {
     private String attributeB;

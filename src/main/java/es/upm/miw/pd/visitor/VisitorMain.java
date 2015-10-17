@@ -1,4 +1,4 @@
-package es.upm.miw.pd.visitor.figure;
+package es.upm.miw.pd.visitor;
 
 import java.util.ArrayList;
 import java.util.Collection;

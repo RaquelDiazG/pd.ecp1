@@ -1,4 +1,4 @@
-package es.upm.miw.pd.visitor.figure;
+package es.upm.miw.pd.visitor;
 
 public class Visitor1 extends Visitor {
 

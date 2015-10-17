@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.8" icons="true" automaticImage="JPEG" always-add-relationships="false" 
   generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
-  <class id="1" language="java" name="es.upm.miw.pd.visitor.figure.Visitor2" project="pd.ecp1" 
-    file="/pd.ecp1/src/main/java/es/upm/miw/pd/visitor/figure/Visitor2.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="1" language="java" name="es.upm.miw.pd.visitor.Visitor2" project="pd.ecp1" 
+    file="/pd.ecp1/src/main/java/es/upm/miw/pd/visitor/Visitor2.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="644" y="386"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="es.upm.miw.pd.visitor.figure.Visitor1" project="pd.ecp1" 
-    file="/pd.ecp1/src/main/java/es/upm/miw/pd/visitor/figure/Visitor1.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="es.upm.miw.pd.visitor.Visitor1" project="pd.ecp1" 
+    file="/pd.ecp1/src/main/java/es/upm/miw/pd/visitor/Visitor1.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="427" y="354"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,8 +19,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="es.upm.miw.pd.visitor.figure.ElementA" project="pd.ecp1" 
-    file="/pd.ecp1/src/main/java/es/upm/miw/pd/visitor/figure/ElementA.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="3" language="java" name="es.upm.miw.pd.visitor.ElementA" project="pd.ecp1" 
+    file="/pd.ecp1/src/main/java/es/upm/miw/pd/visitor/ElementA.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="-36" y="372"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -28,8 +28,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="es.upm.miw.pd.visitor.figure.ElementB" project="pd.ecp1" 
-    file="/pd.ecp1/src/main/java/es/upm/miw/pd/visitor/figure/ElementB.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="4" language="java" name="es.upm.miw.pd.visitor.ElementB" project="pd.ecp1" 
+    file="/pd.ecp1/src/main/java/es/upm/miw/pd/visitor/ElementB.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="215" y="373"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -37,8 +37,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="es.upm.miw.pd.visitor.figure.Visitor" project="pd.ecp1" 
-    file="/pd.ecp1/src/main/java/es/upm/miw/pd/visitor/figure/Visitor.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="es.upm.miw.pd.visitor.Visitor" project="pd.ecp1" 
+    file="/pd.ecp1/src/main/java/es/upm/miw/pd/visitor/Visitor.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="529" y="164"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -46,8 +46,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="6" language="java" name="es.upm.miw.pd.visitor.figure.Element" project="pd.ecp1" 
-    file="/pd.ecp1/src/main/java/es/upm/miw/pd/visitor/figure/Element.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="6" language="java" name="es.upm.miw.pd.visitor.Element" project="pd.ecp1" 
+    file="/pd.ecp1/src/main/java/es/upm/miw/pd/visitor/Element.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="101" y="174"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -56,19 +56,19 @@
     </display>  
   </interface>  
   <generalization id="7">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <generalization id="8">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="5"/>  
   </generalization>  
+  <generalization id="8">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
   <realization id="9">    
-    <end type="SOURCE" refId="3"/>    
+    <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="6"/>  
   </realization>  
   <realization id="10">    
-    <end type="SOURCE" refId="4"/>    
+    <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="6"/>  
   </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
