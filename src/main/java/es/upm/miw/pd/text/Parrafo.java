@@ -6,20 +6,18 @@ public class Parrafo extends Escrito {
 
     @Override
     public void add(Componente componente) {
-        try {
-            Caracter caracter = (Caracter) componente;
-            componentes.add(caracter);
-        } catch (Exception e) {
+        if (!componente.isComposite()) {
+            componentes.add(componente);
+        } else {
             throw new UnsupportedOperationException();
         }
     }
 
     @Override
     public void remove(Componente componente) {
-        try {
-            Caracter caracter = (Caracter) componente;
-            componentes.removeAll(Collections.singleton(caracter));
-        } catch (Exception e) {
+        if (!componente.isComposite()) {
+            componentes.removeAll(Collections.singleton(componente));
+        } else {
             throw new UnsupportedOperationException();
         }
 
@@ -34,4 +32,8 @@ public class Parrafo extends Escrito {
         return stringParrafo + "\n";
     }
 
+    @Override
+    public boolean isComposite() {
+        return true;
+    }
 }

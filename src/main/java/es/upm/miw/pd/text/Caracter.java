@@ -26,4 +26,9 @@ public class Caracter extends Componente {
         return String.valueOf(caracter);
     }
 
+    @Override
+    public boolean isComposite() {
+        return false;
+    }
+
 }

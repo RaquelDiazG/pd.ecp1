@@ -6,20 +6,18 @@ public class Texto extends Escrito {
 
     @Override
     public void add(Componente componente) {
-        try {
-            Escrito escrito = (Escrito) componente;
-            componentes.add(escrito);
-        } catch (Exception e) {
+        if (componente.isComposite()) {
+            componentes.add(componente);
+        } else {
             throw new UnsupportedOperationException();
         }
     }
 
     @Override
     public void remove(Componente componente) {
-        try {
-            Escrito escrito = (Escrito) componente;
-            componentes.removeAll(Collections.singleton(escrito));
-        } catch (Exception e) {
+        if (componente.isComposite()) {
+            componentes.removeAll(Collections.singleton(componente));
+        } else {
             throw new UnsupportedOperationException();
         }
     }
@@ -33,4 +31,8 @@ public class Texto extends Escrito {
         return stringTexto + "---o---\n";
     }
 
+    @Override
+    public boolean isComposite() {
+        return true;
+    }
 }

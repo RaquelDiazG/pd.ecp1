@@ -16,4 +16,6 @@ public abstract class Escrito extends Componente {
     public abstract void remove(Componente componente);
 
     public abstract String dibujar(boolean mayusculas);
+
+    public abstract boolean isComposite();
 }
